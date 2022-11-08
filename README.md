@@ -2,7 +2,7 @@
 
 Här är mitt test :)
 
-Appen heter Homeset och är tänkt att vara ett ärendehanteringsystem för hyresgäster och hyresvärldar
+Appen heter Homeset och är tänkt att vara ett ärendehanteringsystem för hyresgäster och hyresvärdar
 
 Backend:
 
