@@ -20,5 +20,5 @@ Du kan:
 
 \*Se alla dina ärenden (Är du hyresvärd ser du alla ärenden för byggnaderna du har hand om)
 
-Det var en kul utmaning men självklart finns det gott om förbättringar både på backend och frontend
+Det var en kul utmaning men självklart finns det gott om förbättringar både på backend och frontend.
 Vi kan gå igenom mer under vårt möte
