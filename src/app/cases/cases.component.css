@@ -1,0 +1,8 @@
+.mat-row:hover .mat-cell {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.mat-cell {
+  width: 250px;
+}

@@ -1,0 +1,15 @@
+.mat-form-field + .mat-form-field {
+  margin: 20px 40px;
+}
+
+.profileCard {
+  padding: 45px;
+}
+
+.mat-form-field {
+  width: 250px;
+}
+
+.logout {
+  margin-left: 400px;
+}

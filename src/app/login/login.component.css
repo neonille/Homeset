@@ -1,0 +1,24 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginCard {
+  padding: 40px;
+}
+
+.loginButtonRow {
+  text-align: center;
+}
+
+.errorText {
+  color: red;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}

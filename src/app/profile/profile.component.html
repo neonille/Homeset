@@ -1,0 +1,59 @@
+<form [formGroup]="profileGroup">
+  <mat-card class="profileCard">
+    <mat-card-title-group>
+      <mat-card-title>
+        <img
+          mat-card-sm-image
+          src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+      /></mat-card-title>
+    </mat-card-title-group>
+    <mat-card-content>
+      <div class="row">
+        <mat-form-field appearance="fill">
+          <mat-label>Förnamn</mat-label>
+          <input
+            formControlName="firstname"
+            matInput
+            maxlength="10"
+            size="20"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Efternamn</mat-label>
+          <input matInput formControlName="lastname" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="fill">
+          <mat-label>Telefon</mat-label>
+          <input matInput formControlName="phone" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="fill">
+          <mat-label>Lägenhetsnummer</mat-label>
+          <input disabled matInput [value]="user.apartId" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Hus</mat-label>
+          <input disabled matInput [value]="user.complexName" />
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-footer>
+      <button mat-raised-button (click)="update()" color="primary">
+        Uppdatera
+      </button>
+      <button mat-raised-button (click)="logout()" class="logout" color="warn">
+        Logga ut
+      </button>
+    </mat-card-footer>
+  </mat-card>
+</form>

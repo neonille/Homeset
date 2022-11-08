@@ -1,0 +1,68 @@
+<form [formGroup]="caseGroup">
+  <h1 mat-dialog-title>
+    {{ !isNew ? data.headline : "Edit/Create a new case" }}
+  </h1>
+
+  <div mat-dialog-content class="caseDialog">
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <mat-label>Id</mat-label>
+        <input
+          readonly
+          formControlName="id"
+          matInput
+          maxlength="10"
+          size="20"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Datum</mat-label>
+        <input readonly matInput formControlName="date" />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <mat-label>Byggnad</mat-label>
+        <input readonly matInput formControlName="complex" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Lägenhetsnummer</mat-label>
+        <input matInput formControlName="apartId" />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <input readonly matInput formControlName="status" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Hus</mat-label>
+        <input readonly matInput formControlName="complex" />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field style="flex: 1">
+        <mat-label>Rubrik</mat-label>
+        <input [readonly]="!isNew" matInput formControlName="headline" />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field style="flex: 1">
+        <mat-label>Beskrivning av ärendet</mat-label>
+        <textarea
+          [readonly]="!isNew"
+          formControlName="description"
+          matInput
+          placeholder="Beskriv vad du vill ha hjälp med"
+        ></textarea>
+      </mat-form-field>
+    </div>
+    <button *ngIf="!isNew" mat-raised-button color="warn" (click)="delete()">
+      Ta bort
+    </button>
+    <button *ngIf="isNew" mat-raised-button color="primary" (click)="create()">
+      Skapa
+    </button>
+  </div>
+</form>

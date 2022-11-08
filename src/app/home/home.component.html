@@ -1,0 +1,20 @@
+<mat-card *ngIf="user != null" class="profileCard">
+  <mat-card-title-group>
+    <mat-card-title>{{
+      user.firstname.concat(" " + user.lastname)
+    }}</mat-card-title>
+    <mat-card-subtitle>{{
+      user.landlord ? "Hyresvärd" : "Hyresgäst"
+    }}</mat-card-subtitle>
+    <img
+      mat-card-sm-image
+      src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+    />
+  </mat-card-title-group>
+  <mat-card-content>
+    <p>{{ user.complexName }}</p>
+    <p>Nr:{{ user.apartId }}</p>
+    <p>{{ user.phone }}</p>
+    <p>{{ user.email }}</p>
+  </mat-card-content>
+</mat-card>

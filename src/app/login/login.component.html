@@ -1,0 +1,27 @@
+<div class="container">
+  <mat-card class="loginCard">
+    <mat-card-header>
+      <mat-card-title>HOMESET</mat-card-title>
+      <mat-card-subtitle
+        >Logga in med ditt förnamn och lösenord</mat-card-subtitle
+      >
+    </mat-card-header>
+
+    <form [formGroup]="loginFormGroup" (ngSubmit)="login()">
+      <mat-card-content class="loginContainer"
+        ><mat-form-field appearance="outline">
+          <mat-label>Förnamn</mat-label>
+          <input formControlName="firstname" matInput required />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Lösenord</mat-label>
+          <input formControlName="password" matInput required />
+        </mat-form-field>
+        <p class="errorText" *ngIf="invalidInput">Båda fälten måste fyllas i</p>
+      </mat-card-content>
+      <mat-card-actions class="loginButtonRow">
+        <button mat-raised-button color="primary">Login</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

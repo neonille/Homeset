@@ -1,0 +1,9 @@
+.profileCard {
+  width: 30vw;
+}
+
+mat-card-content {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}

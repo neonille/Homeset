@@ -1,0 +1,16 @@
+<mat-card class="mainMenu">
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a
+      mat-tab-link
+      class="mat-tab-links"
+      *ngFor="let link of links"
+      (click)="linkClicked(link.title, link.route)"
+      [active]="activeLink == link.title"
+    >
+      <mat-icon [fontIcon]="link.icon"></mat-icon>
+
+      {{ link.title }}
+    </a>
+  </nav>
+  <mat-tab-nav-panel mat-stretch-tabs #tabPanel></mat-tab-nav-panel>
+</mat-card>
