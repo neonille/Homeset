@@ -1,0 +1,10 @@
+.app {
+  background-color: rgb(53, 192, 192);
+  height: 100vh;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
